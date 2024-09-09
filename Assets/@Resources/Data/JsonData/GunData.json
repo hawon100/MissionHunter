@@ -1,0 +1,84 @@
+{
+  "gunDatas": [
+    {
+      "DataID": 50001,
+      "Name": "AKM",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Intersection": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5
+    },
+    {
+      "DataID": 50002,
+      "Name": "K2",
+      "Ammo": "5.56",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Intersection": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5
+    },
+    {
+      "DataID": 50003,
+      "Name": "AK47",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Intersection": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5
+    },
+    {
+      "DataID": 50004,
+      "Name": "AR15",
+      "Ammo": "5.56",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Intersection": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5
+    },
+    {
+      "DataID": 50005,
+      "Name": "micro-UZI",
+      "Ammo": "9",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Intersection": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5
+    },
+    {
+      "DataID": 50006,
+      "Name": "SKS",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Intersection": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5
+    },
+    {
+      "DataID": 50007,
+      "Name": "DBS",
+      "Ammo": "12",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Intersection": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5
+    },
+    {
+      "DataID": 50008,
+      "Name": "Glock",
+      "Ammo": "9",
+      "Damage": 5.0,
+      "FireRate": 750.0,
+      "Intersection": 3000.0,
+      "Weight": 0.91,
+      "Recoil": 0.5
+    }
+  ]
+}
