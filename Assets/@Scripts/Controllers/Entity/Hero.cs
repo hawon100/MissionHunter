@@ -7,7 +7,7 @@ using static Define;
 
 public class Hero : Creature
 {
-    [Inject] private readonly CameraController cameraController;
+    private CameraController cameraController;
 
     private float _yVelocity;
     private CharacterController _characterController;
@@ -17,6 +17,7 @@ public class Hero : Creature
         if (base.Init() == false)
             return false;
 
+        cameraController = gameObject.GetOrAddComponent<CameraController>();
         _characterController = gameObject.GetOrAddComponent<CharacterController>();
 
         ObjectType = EObjectType.Hero;

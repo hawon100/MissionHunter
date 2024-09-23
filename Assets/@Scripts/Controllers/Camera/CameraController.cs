@@ -10,15 +10,13 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     Transform _delta = null;
 
-    [SerializeField]
-    GameObject _player = null;
+    public Camera _cam;
 
-    private Camera_YPoint _camYpoint;
-    [SerializeField] private Transform _camPos;
-    private Transform _camYPivotPos;
+    [SerializeField] private Camera_YPoint _camYpoint;
     private float _currentYRotation = 0f;
     private float _minY = -40.0f;
     private float _maxY = 30.0f;
+
     private bool _isPersonView = false; // true : first | false : third
     private bool _isFirstPerosn = false;
     private bool _isThirdPerosn = false;
@@ -26,13 +24,11 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         _camYpoint = Util.FindChild(gameObject, "YPivot").GetOrAddComponent<Camera_YPoint>();
-        _camPos = Util.FindChild(Util.FindChild(gameObject), "Main Camera").transform;
-        _camYPivotPos = Util.FindChild(gameObject, "YPivot").transform;
+        _cam = Util.FindChild(Util.FindChild(gameObject, "YPivot"), "Main Camera").GetComponent<Camera>();
   
         _isThirdPerosn = true;
     }
 
-    public void SetPlayer(GameObject player) { _player = player; }
     public void SetTransform(Transform First, Transform Third, Transform Shoulder) { _camYpoint._firstTransform = First; _camYpoint._thirdTransform = Third; _camYpoint._shoulderTransform = Shoulder; }
 
     private void Update()
@@ -63,7 +59,6 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
-        if (_player != null) transform.position = _player.transform.position;
         HandleCamera();
 
         switch (_mode)
@@ -72,7 +67,7 @@ public class CameraController : MonoBehaviour
                 SetThirdPersonView(_camYpoint._thirdTransform);
                 if(_isThirdPerosn)
                 {
-                    _camPos.position = _delta.position;
+                    _cam.transform.position = _delta.position;
                     _isThirdPerosn = false;
                 }
                 break;
@@ -80,7 +75,7 @@ public class CameraController : MonoBehaviour
                 SetFirstPersonView(_camYpoint._firstTransform);
                 if (_isFirstPerosn)
                 {
-                    _camPos.position = _delta.position;
+                    _cam.transform.position = _delta.position;
                     _isFirstPerosn = false;
                 }
                 break;
@@ -99,7 +94,7 @@ public class CameraController : MonoBehaviour
         _currentYRotation -= y;
         _currentYRotation = Mathf.Clamp(_currentYRotation, _minY, _maxY);
 
-        _camYPivotPos.localEulerAngles = new Vector3(_currentYRotation, _camYPivotPos.localEulerAngles.y, _camYPivotPos.localEulerAngles.z);
+        _camYpoint.transform.localEulerAngles = new Vector3(_currentYRotation, _camYpoint.transform.localEulerAngles.y, _camYpoint.transform.localEulerAngles.z);
     }  
 
     public void SetFirstPersonView(Transform delta)

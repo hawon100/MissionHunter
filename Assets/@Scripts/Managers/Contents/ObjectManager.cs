@@ -8,6 +8,7 @@ using static Define;
 public class ObjectManager
 {
 	public HashSet<Hero> Heroes { get; } = new HashSet<Hero>();
+	public HashSet<Gun_AssaultRifle> Gun_AssaultRifles { get; } = new HashSet<Gun_AssaultRifle>();
 
 	#region Roots
 	public Transform GetRootTransform(string name)
@@ -20,6 +21,7 @@ public class ObjectManager
 	}
 
 	public Transform HeroRoot { get { return GetRootTransform("@Heroes"); } }
+	public Transform Gun_AssaultRifleRoot { get { return GetRootTransform("@Gun_AssaultRifles"); } }
 	#endregion
 
 	public GameObject SpawnGameObject(Vector3 position, string prefabName)
@@ -45,6 +47,12 @@ public class ObjectManager
 			Hero hero = go.GetComponent<Hero>();
 			Heroes.Add(hero);
 		}
+		else if(obj.ObjectType == EObjectType.Gun)
+		{
+			obj.transform.parent = Gun_AssaultRifleRoot;
+			Gun_AssaultRifle gun_AssaultRifle = go.GetComponent<Gun_AssaultRifle>();
+			Gun_AssaultRifles.Add(gun_AssaultRifle);
+		}
 
 		return obj as T;
 	}
@@ -58,6 +66,11 @@ public class ObjectManager
 			Hero hero = obj.GetComponent<Hero>();
 			Heroes.Remove(hero);
 		}
+		else if(obj.ObjectType == EObjectType.Gun)
+		{
+            Gun_AssaultRifle gun_AssaultRifle = obj.GetComponent<Gun_AssaultRifle>();
+            Gun_AssaultRifles.Remove(gun_AssaultRifle);
+        }
 
         Managers.Resource.Destroy(obj.gameObject);
 	}

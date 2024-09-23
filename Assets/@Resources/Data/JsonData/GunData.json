@@ -6,9 +6,10 @@
       "Ammo": "7.62",
       "Damage": 20.0,
       "FireRate": 1200.0,
-      "Intersection": 3000.0,
+      "Range": 3000.0,
       "Weight": 10.0,
-      "Recoil": 0.5
+      "Recoil": 0.5,
+      "Basic_magazine": 30.0
     },
     {
       "DataID": 50002,
@@ -16,9 +17,10 @@
       "Ammo": "5.56",
       "Damage": 20.0,
       "FireRate": 1200.0,
-      "Intersection": 3000.0,
+      "Range": 3000.0,
       "Weight": 10.0,
-      "Recoil": 0.5
+      "Recoil": 0.5,
+      "Basic_magazine": 30.0
     },
     {
       "DataID": 50003,
@@ -26,9 +28,10 @@
       "Ammo": "7.62",
       "Damage": 20.0,
       "FireRate": 1200.0,
-      "Intersection": 3000.0,
+      "Range": 3000.0,
       "Weight": 10.0,
-      "Recoil": 0.5
+      "Recoil": 0.5,
+      "Basic_magazine": 30.0
     },
     {
       "DataID": 50004,
@@ -36,49 +39,285 @@
       "Ammo": "5.56",
       "Damage": 20.0,
       "FireRate": 1200.0,
-      "Intersection": 3000.0,
+      "Range": 3000.0,
       "Weight": 10.0,
-      "Recoil": 0.5
+      "Recoil": 0.5,
+      "Basic_magazine": 30.0
     },
     {
       "DataID": 50005,
+      "Name": "FAMAS",
+      "Ammo": "5.56",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 30.0
+    },
+    {
+      "DataID": 60001,
+      "Name": "kar98k",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 12.0
+    },
+    {
+      "DataID": 60002,
+      "Name": "AW",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 12.0
+    },
+    {
+      "DataID": 60003,
+      "Name": "M24",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 12.0
+    },
+    {
+      "DataID": 60004,
+      "Name": "M82",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 12.0
+    },
+    {
+      "DataID": 70001,
+      "Name": "SKS",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 12.0
+    },
+    {
+      "DataID": 70002,
+      "Name": "SVD",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 12.0
+    },
+    {
+      "DataID": 70003,
+      "Name": "MK14",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 12.0
+    },
+    {
+      "DataID": 70004,
+      "Name": "TRG",
+      "Ammo": "7.62",
+      "Damage": 20.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 12.0
+    },
+    {
+      "DataID": 80001,
       "Name": "micro-UZI",
       "Ammo": "9",
       "Damage": 20.0,
       "FireRate": 1200.0,
-      "Intersection": 3000.0,
+      "Range": 3000.0,
       "Weight": 10.0,
-      "Recoil": 0.5
+      "Recoil": 0.5,
+      "Basic_magazine": 30.0
     },
     {
-      "DataID": 50006,
-      "Name": "SKS",
-      "Ammo": "7.62",
+      "DataID": 80002,
+      "Name": "pp19",
+      "Ammo": "9",
       "Damage": 20.0,
       "FireRate": 1200.0,
-      "Intersection": 3000.0,
+      "Range": 3000.0,
       "Weight": 10.0,
-      "Recoil": 0.5
+      "Recoil": 0.5,
+      "Basic_magazine": 30.0
     },
     {
-      "DataID": 50007,
-      "Name": "DBS",
+      "DataID": 80003,
+      "Name": "p90",
+      "Ammo": "9",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 30.0
+    },
+    {
+      "DataID": 80004,
+      "Name": "UMP",
+      "Ammo": "9",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 30.0
+    },
+    {
+      "DataID": 90001,
+      "Name": "DP12",
       "Ammo": "12",
       "Damage": 20.0,
       "FireRate": 1200.0,
-      "Intersection": 3000.0,
+      "Range": 3000.0,
       "Weight": 10.0,
-      "Recoil": 0.5
+      "Recoil": 0.5,
+      "Basic_magazine": 2.0
     },
     {
-      "DataID": 50008,
+      "DataID": 90002,
+      "Name": "M590",
+      "Ammo": "12",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 2.0
+    },
+    {
+      "DataID": 90003,
+      "Name": "M870",
+      "Ammo": "12",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 2.0
+    },
+    {
+      "DataID": 90004,
+      "Name": "Model520",
+      "Ammo": "12",
+      "Damage": 20.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 2.0
+    },
+    {
+      "DataID": 100001,
+      "Name": "M249",
+      "Ammo": "7.62",
+      "Damage": 5.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 300.0
+    },
+    {
+      "DataID": 100002,
+      "Name": "DP28",
+      "Ammo": "7.62",
+      "Damage": 5.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 300.0
+    },
+    {
+      "DataID": 100003,
+      "Name": "MG3",
+      "Ammo": "7.62",
+      "Damage": 5.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 300.0
+    },
+    {
+      "DataID": 100004,
+      "Name": "NSV",
+      "Ammo": "7.62",
+      "Damage": 5.0,
+      "FireRate": 1200.0,
+      "Range": 3000.0,
+      "Weight": 10.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 300.0
+    },
+    {
+      "DataID": 110001,
       "Name": "Glock",
       "Ammo": "9",
       "Damage": 5.0,
       "FireRate": 750.0,
-      "Intersection": 3000.0,
-      "Weight": 0.91,
-      "Recoil": 0.5
+      "Range": 3000.0,
+      "Weight": 3.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 25.0
+    },
+    {
+      "DataID": 110002,
+      "Name": "SWM1",
+      "Ammo": "9",
+      "Damage": 5.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 3.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 25.0
+    },
+    {
+      "DataID": 110003,
+      "Name": "M1911",
+      "Ammo": "9",
+      "Damage": 5.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 3.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 25.0
+    },
+    {
+      "DataID": 110004,
+      "Name": "Beretta92",
+      "Ammo": "9",
+      "Damage": 5.0,
+      "FireRate": 1.0,
+      "Range": 3000.0,
+      "Weight": 3.0,
+      "Recoil": 0.5,
+      "Basic_magazine": 25.0
     }
   ]
 }

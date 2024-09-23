@@ -49,9 +49,10 @@ namespace Data
 		public string Ammo;
 		public float Damage;
 		public float FireRate;
-		public float Intersection;
+		public float Range;
 		public float Weight;
 		public float Recoil;
+		public float Basic_magazine;
     }
 
     [Serializable]
