@@ -6,8 +6,6 @@ using static Define;
 
 public class GameScene : BaseScene
 {
-	[Inject] private readonly CameraController cameraController;
-
 	public override bool Init()
 	{
 		if (base.Init() == false)
@@ -20,6 +18,7 @@ public class GameScene : BaseScene
 		hero.SetInfo(1);
 		Gun_AssaultRifle gun_AssaultRifle = Managers.Object.Spawn<Gun_AssaultRifle>(new Vector3(0.6f, -0.3f, 1f));
 		gun_AssaultRifle.SetInfo(50001);
+		gun_AssaultRifle.fpsCam = hero.gameObject.GetComponent<CameraController>();
 
         return true;
 	}
