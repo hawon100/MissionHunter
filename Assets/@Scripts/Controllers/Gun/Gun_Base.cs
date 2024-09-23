@@ -15,9 +15,11 @@ public class Gun_Base : BaseObject
     public string Ammo;
     public CreatureStat Damage;
     public CreatureStat FireRate;
-    public CreatureStat Intersection;
+    public CreatureStat Range;
     public CreatureStat Weight;
     public CreatureStat Recoil;
+    public float Current_magazine;
+    public CreatureStat Basic_magazine;
     #endregion
 
     public override bool Init()
@@ -26,6 +28,8 @@ public class Gun_Base : BaseObject
             return false;
 
         ObjectType = EObjectType.Gun;
+        Managers.Input.MouseAction += OnMouseEvent;
+        Managers.Input.MouseAction -= OnMouseEvent;
 
         return true;
     }
@@ -41,10 +45,44 @@ public class Gun_Base : BaseObject
         Ammo = GunData.Ammo;
         Damage = new CreatureStat(GunData.Damage);
         FireRate = new CreatureStat(GunData.FireRate);
-        Intersection = new CreatureStat(GunData.Intersection);
+        Range = new CreatureStat(GunData.Range);
         Weight = new CreatureStat(GunData.Weight);
         Recoil = new CreatureStat(GunData.Recoil);
+        Current_magazine = 0;
+        Basic_magazine = new CreatureStat(GunData.Basic_magazine);
     }
 
+    void Update()
+    {
+        if (Basic_magazine.Value <= 0) return;
 
+        if (Current_magazine <= 0)
+        {
+            Reload();
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
+        }
+    }
+
+    public virtual void OnMouseEvent(MouseEvent evt)
+    {
+        switch (evt)
+        {
+            case MouseEvent.PointerDown:
+                break;
+            case MouseEvent.PointerUp:
+                break;
+            case MouseEvent.Press:
+                Shoot();
+                break;
+            case MouseEvent.Click:
+                Shoot();
+                break;
+        }
+    }
+
+    public virtual void Shoot() { }
+    public virtual void Reload() { }
 }

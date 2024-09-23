@@ -7,9 +7,13 @@ public static class Define
 	public enum GunType
 	{
 		None,
-		Pistol,
         Assault_Rifle,
-        Designated_Marksman_Rifle
+        Sniper_Rifle,
+        Designated_Marksman_Rifle,
+        Sub_Machine_Gun,
+        Shot_Gun,
+        Light_Machine_Gun,
+		Pistol
     }
 
 	public enum CameraMode

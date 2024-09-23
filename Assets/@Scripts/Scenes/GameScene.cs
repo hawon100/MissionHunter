@@ -18,7 +18,8 @@ public class GameScene : BaseScene
 		// TODO
 		Hero hero = Managers.Object.Spawn<Hero>(new Vector3(0, 5f, 0));
 		hero.SetInfo(1);
-		cameraController.SetPlayer(hero.gameObject);
+		Gun_AssaultRifle gun_AssaultRifle = Managers.Object.Spawn<Gun_AssaultRifle>(new Vector3(0.6f, -0.3f, 1f));
+		gun_AssaultRifle.SetInfo(50001);
 
         return true;
 	}
