@@ -24,7 +24,7 @@ MonoBehaviour:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dc77b024a80da9242b0c4c36a1f8f85d
-    m_Address: Gun_AssaultRifle
+    m_Address: Gun_AKM
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

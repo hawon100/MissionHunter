@@ -13,17 +13,34 @@ public class GameScene : BaseScene
 
 		SceneType = EScene.GameScene;
 
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
+
 		// TODO
 		Hero hero = Managers.Object.Spawn<Hero>(new Vector3(0, 5f, 0));
 		hero.SetInfo(1);
-		Gun_AssaultRifle gun_AssaultRifle = Managers.Object.Spawn<Gun_AssaultRifle>(new Vector3(0.6f, -0.3f, 1f));
-		gun_AssaultRifle.SetInfo(50001);
-		gun_AssaultRifle.fpsCam = hero.gameObject.GetComponent<CameraController>();
+        Gun_AKM gun_akm = Managers.Object.Spawn<Gun_AKM>(new Vector3(1f, 0f, 1f));
+        gun_akm.SetInfo(50001);
+        gun_akm.fpsCam = hero.gameObject.GetComponent<CameraController>();
 
         return true;
 	}
 
-	public override void Clear()
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.LeftAlt))
+		{
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+		else
+		{
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+
+    public override void Clear()
 	{
 
 	}

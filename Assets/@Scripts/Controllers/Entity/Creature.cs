@@ -45,25 +45,28 @@ public class Creature : BaseObject
 
     void Update()
     {
-        switch(_state)
+        DetectObjectsInRange();
+
+        switch (_state)
         {
             case Define.State.Die:
                 UpdateDie();
                 break;
             case Define.State.Moving:
                 UpdateMoving();
+                UpdateAttack();
+                UpdateInteract();
                 break;
             case Define.State.Idle:
                 UpdateIdle();
                 break;
-            case Define.State.Attack:
-                UpdateAttack();
-                break;
         }
     }
 
+    protected virtual void UpdateInteract() { }
     protected virtual void UpdateDie() { }
     protected virtual void UpdateMoving() { }
     protected virtual void UpdateIdle() { }
     protected virtual void UpdateAttack() { }
+    protected virtual void DetectObjectsInRange() { }
 }

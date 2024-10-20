@@ -23,13 +23,9 @@ public class UI_Base : InitBase
 
 		for (int i = 0; i < names.Length; i++)
 		{
-			if (typeof(T) == typeof(GameObject))
-				objects[i] = Util.FindChild(gameObject, names[i], true);
-			else
-				objects[i] = Util.FindChild<T>(gameObject, names[i], true);
-
-			if (objects[i] == null)
-				Debug.Log($"Failed to bind({names[i]})");
+			if (typeof(T) == typeof(GameObject)) objects[i] = Util.FindChild(gameObject, names[i], true);
+			else objects[i] = Util.FindChild<T>(gameObject, names[i], true);
+			if (objects[i] == null) Debug.Log($"Failed to bind({names[i]})");
 		}
 	}
 

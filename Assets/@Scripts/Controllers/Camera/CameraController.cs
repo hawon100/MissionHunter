@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Camera_YPoint _camYpoint;
     private float _currentYRotation = 0f;
     private float _minY = -40.0f;
-    private float _maxY = 30.0f;
+    private float _maxY = 50.0f;
 
     private bool _isPersonView = false; // true : first | false : third
     private bool _isFirstPerosn = false;
@@ -84,6 +84,15 @@ public class CameraController : MonoBehaviour
 
     private void HandleCamera()
     {
+        RaycastHit hitInfo;
+        Debug.DrawRay(_cam.transform.position, _cam.transform.forward, Color.red, 3000.0f);
+        if (Physics.Raycast(_cam.transform.position, _cam.transform.forward, out hitInfo, 3000.0f))
+        {
+            Debug.Log($"{hitInfo.collider.name}");
+        }
+
+        if (Input.GetKey(KeyCode.LeftAlt)) return;
+
         float x = Input.GetAxisRaw("Mouse X");
         float y = Input.GetAxisRaw("Mouse Y");
 

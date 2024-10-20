@@ -20,6 +20,8 @@ public class Gun_Base : BaseObject
     public CreatureStat Recoil;
     public float Current_magazine;
     public CreatureStat Basic_magazine;
+    public bool isTakeUp;
+    public bool isItemization;
     #endregion
 
     public override bool Init()
@@ -50,9 +52,17 @@ public class Gun_Base : BaseObject
         Recoil = new CreatureStat(GunData.Recoil);
         Current_magazine = 0;
         Basic_magazine = new CreatureStat(GunData.Basic_magazine);
+        isTakeUp = false;
+        isItemization = true;
     }
 
     void Update()
+    {
+        OnReload();
+        OnTakeWeapon();
+    }
+
+    void OnReload()
     {
         if (Basic_magazine.Value <= 0) return;
 
@@ -63,6 +73,18 @@ public class Gun_Base : BaseObject
         else if (Input.GetKeyDown(KeyCode.R))
         {
             Reload();
+        }
+    }
+
+    void OnTakeWeapon()
+    {
+        if (gameObject.GetComponentInParent<Hero>() != null)
+        {
+            isTakeUp = true;
+        }
+        else
+        {
+            isTakeUp = false;
         }
     }
 

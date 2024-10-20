@@ -54,6 +54,28 @@ public static class Util
 		return null;
 	}
 
+    public static GameObject FindParent(GameObject go, string name = null)
+    {
+        Transform transform = FindParent<Transform>(go, name);
+        if (transform == null)
+            return null;
+
+        return transform.gameObject;
+    }
+
+    public static T FindParent<T>(GameObject go, string name = null) where T : UnityEngine.Object
+	{
+		if (go == null) return null;
+
+		foreach(T component in go.GetComponentsInParent<T>())
+		{
+			if(string.IsNullOrEmpty(name) || component.name == name)
+				return component;
+		}
+
+		return null;
+	}
+
 	public static T ParseEnum<T>(string value)
 	{
 		return (T)Enum.Parse(typeof(T), value, true);

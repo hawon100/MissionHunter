@@ -8,7 +8,6 @@ public class UI_TitleScene : UI_Scene
 {
 	float time = 3f;
 	float curTime = 0f;
-	int second;
 
 	enum Texts
 	{
